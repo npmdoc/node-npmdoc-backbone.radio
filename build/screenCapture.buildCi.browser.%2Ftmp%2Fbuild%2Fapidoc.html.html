@@ -1,0 +1,2010 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/marionettejs/backbone.radio">backbone.radio (v2.0.0)</a>
+</h1>
+<h4>Messaging patterns for Backbone applications.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backbone.radio">module backbone.radio</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">backbone.radio.</span>DEBUG</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>Channel
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio._callHandler">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>_callHandler
+            <span class="apidocSignatureSpan">(callback, context, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio._debugText">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>_debugText
+            <span class="apidocSignatureSpan">(warning, eventName, channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio._eventsApi">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>_eventsApi
+            <span class="apidocSignatureSpan">(obj, action, name, rest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.bind">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>bind
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.channel">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>channel
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.debugLog">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>debugLog
+            <span class="apidocSignatureSpan">(warning, eventName, channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.listenTo">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>listenTo
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.listenToOnce">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>listenToOnce
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.log">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>log
+            <span class="apidocSignatureSpan">(channelName, eventName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.noConflict">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>noConflict
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.off">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>off
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.on">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>on
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.once">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>once
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.radio.Channel">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>radio.Channel
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.reply">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>reply
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.replyOnce">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>replyOnce
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.request">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>request
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.reset">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>reset
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.stopListening">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>stopListening
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.stopReplying">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>stopReplying
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.trigger">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>trigger
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.tuneIn">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>tuneIn
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.tuneOut">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>tuneOut
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.unbind">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>unbind
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backbone.radio.</span>Requests</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backbone.radio.</span>_channels</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backbone.radio.</span>radio.Channel.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">backbone.radio.</span>radio.Requests</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">backbone.radio.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backbone.radio.Channel">module backbone.radio.Channel</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.Channel">
+            function <span class="apidocSignatureSpan">backbone.radio.</span>Channel
+            <span class="apidocSignatureSpan">(channelName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backbone.radio.Channel.prototype">module backbone.radio.Channel.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.bind">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>bind
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.listenTo">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>listenTo
+            <span class="apidocSignatureSpan">(obj, name, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.listenToOnce">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>listenToOnce
+            <span class="apidocSignatureSpan">(obj, name, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.off">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>off
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.on">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>on
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.once">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>once
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.reply">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>reply
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.replyOnce">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>replyOnce
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.request">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>request
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.reset">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.stopListening">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>stopListening
+            <span class="apidocSignatureSpan">(obj, name, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.stopReplying">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>stopReplying
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.trigger">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>trigger
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Channel.prototype.unbind">
+            function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>unbind
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.backbone.radio.Requests">module backbone.radio.Requests</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Requests.reply">
+            function <span class="apidocSignatureSpan">backbone.radio.Requests.</span>reply
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Requests.replyOnce">
+            function <span class="apidocSignatureSpan">backbone.radio.Requests.</span>replyOnce
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Requests.request">
+            function <span class="apidocSignatureSpan">backbone.radio.Requests.</span>request
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.backbone.radio.Requests.stopReplying">
+            function <span class="apidocSignatureSpan">backbone.radio.Requests.</span>stopReplying
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backbone.radio" id="apidoc.module.backbone.radio">module backbone.radio</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel" id="apidoc.element.backbone.radio.Channel">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>Channel
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Channel = function (channelName) {
+  this.channelName = channelName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ if (!channelName) {
+   throw new Error('You must provide a name for the channel.');
+ }
+
+ if (Radio._channels[channelName]) {
+   return Radio._channels[channelName];
+ } else {
+   return (Radio._channels[channelName] = new Radio.<span class="apidocCodeKeywordSpan">Channel</span>(channelName));
+ }
+};
+
+/*
+* Backbone.Radio.Channel
+* ----------------------
+* A Channel is an object that extends from Backbone.Events,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio._callHandler" id="apidoc.element.backbone.radio._callHandler">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>_callHandler
+        <span class="apidocSignatureSpan">(callback, context, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_callHandler = function (callback, context, args) {
+  var a1 = args[0],
+      a2 = args[1],
+      a3 = args[2];
+  switch (args.length) {
+    case 0:
+      return callback.call(context);
+    case 1:
+      return callback.call(context, a1);
+    case 2:
+      return callback.call(context, a1, a2);
+    case 3:
+      return callback.call(context, a1, a2, a3);
+    default:
+      return callback.apply(context, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    Radio.log.apply(this, [channelName, name].concat(args));
+  }
+
+  // If the request isn't handled, log it in DEBUG mode and exit
+  if (requests &amp;&amp; (requests[name] || requests['default'])) {
+    var handler = requests[name] || requests['default'];
+    args = requests[name] ? args : arguments;
+    return Radio.<span class="apidocCodeKeywordSpan">_callHandler</span>(handler.callback, handler.context, args);
+  } else {
+    Radio.debugLog('An unhandled request was fired', name, channelName);
+  }
+},
+
+// Set up a handler for a request
+reply: function(name, callback, context) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio._debugText" id="apidoc.element.backbone.radio._debugText">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>_debugText
+        <span class="apidocSignatureSpan">(warning, eventName, channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_debugText = function (warning, eventName, channelName) {
+  return warning + (channelName ? ' on the ' + channelName + ' channel' : '') + ': "' + eventName + '"';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// This is the method that's called when an unregistered event was called.
+// By default, it logs warning to the console. By overriding this you could
+// make it throw an Error, for instance. This would make firing a nonexistent event
+// have the same consequence as firing a nonexistent method on an Object.
+Radio.debugLog = function(warning, eventName, channelName) {
+  if (Radio.DEBUG &amp;&amp; console &amp;&amp; console.warn) {
+    console.warn(Radio.<span class="apidocCodeKeywordSpan">_debugText</span>(warning, eventName, channelName));
+  }
+};
+
+var eventSplitter = /\s+/;
+
+// An internal method used to handle Radio's method overloading for Requests.
+// It's borrowed from Backbone.Events. It differs from Backbone's overload
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio._eventsApi" id="apidoc.element.backbone.radio._eventsApi">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>_eventsApi
+        <span class="apidocSignatureSpan">(obj, action, name, rest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_eventsApi = function (obj, action, name, rest) {
+  if (!name) {
+    return false;
+  }
+
+  var results = {};
+
+  // Handle event maps.
+  if ((typeof name === 'undefined' ? 'undefined' : _typeof(name)) === 'object') {
+    for (var key in name) {
+      var result = obj[action].apply(obj, [key, name[key]].concat(rest));
+      eventSplitter.test(key) ? _.extend(results, result) : results[key] = result;
+    }
+    return results;
+  }
+
+  // Handle space separated event names.
+  if (eventSplitter.test(name)) {
+    var names = name.split(eventSplitter);
+    for (var i = 0, l = names.length; i &lt; l; i++) {
+      results[names[i]] = obj[action].apply(obj, [names[i]].concat(rest));
+    }
+    return results;
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+Radio.Requests = {
+
+  // Make a request
+  request: function(name) {
+var args = _.toArray(arguments).slice(1);
+var results = Radio.<span class="apidocCodeKeywordSpan">_eventsApi</span>(this, 'request', name, args);
+if (results) {
+  return results;
+}
+var channelName = this.channelName;
+var requests = this._requests;
+
+// Check if we should log the request, and if so, do it
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.bind" id="apidoc.element.backbone.radio.bind">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>bind
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bind = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+
+var _logs = {};
+
+// This is to produce an identical function in both tuneIn and tuneOut,
+// so that Backbone.Events unregisters it.
+function _partial(channelName) {
+return _logs[channelName] || (_logs[channelName] = _.<span class="apidocCodeKeywordSpan">bind</span>(Radio.log, Radio, channelName
+));
+}
+
+_.extend(Radio, {
+
+// Log information about the channel and event
+log: function(channelName, eventName) {
+  if (typeof console === 'undefined') { return; }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.channel" id="apidoc.element.backbone.radio.channel">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>channel
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">channel = function (channelName) {
+  if (!channelName) {
+    throw new Error('You must provide a name for the channel.');
+  }
+
+  if (Radio._channels[channelName]) {
+    return Radio._channels[channelName];
+  } else {
+    return Radio._channels[channelName] = new Radio.Channel(channelName);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+The real draw of Backbone.Radio are Channels. A Channel is simply an object that has Backbone.Events and Radio.Requests mixed into
+ it:
+it's a standalone message bus comprised of both systems.
+
+Getting a handle of a Channel is easy.
+
+```js
+// Get a reference to the channel named 'user'
+var userChannel = Backbone.Radio.<span class="apidocCodeKeywordSpan">channel</span>('user');
+```
+
+Once you've got a channel, you can attach handlers to it.
+
+```js
+userChannel.on('some:event', function() {
+console.log('An event has happened!');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.debugLog" id="apidoc.element.backbone.radio.debugLog">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>debugLog
+        <span class="apidocSignatureSpan">(warning, eventName, channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debugLog = function (warning, eventName, channelName) {
+  if (Radio.DEBUG &amp;&amp; console &amp;&amp; console.warn) {
+    console.warn(Radio._debugText(warning, eventName, channelName));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // If the request isn't handled, log it in DEBUG mode and exit
+  if (requests &amp;&amp; (requests[name] || requests['default'])) {
+    var handler = requests[name] || requests['default'];
+    args = requests[name] ? args : arguments;
+    return Radio._callHandler(handler.callback, handler.context, args);
+  } else {
+    Radio.<span class="apidocCodeKeywordSpan">debugLog</span>('An unhandled request was fired', name, channelName);
+  }
+},
+
+// Set up a handler for a request
+reply: function(name, callback, context) {
+  if (Radio._eventsApi(this, 'reply', name, [callback, context])) {
+    return this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.listenTo" id="apidoc.element.backbone.radio.listenTo">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>listenTo
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenTo = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Anyone who has used Backbone should be quite familiar with Backbone.Events. Backbone.Events is what facilitates
+communications between objects in your application. The quintessential example of this is listening in on a
+Model's change event.
+
+```js
+// Listen in on a model's change events
+this.<span class="apidocCodeKeywordSpan">listenTo</span>(someModel, 'change', myCallback);
+
+// Later on, the model triggers a change event when it has been changed
+someModel.trigger('change');
+```
+
+Let's look at a diagram for Backbone.Events:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.listenToOnce" id="apidoc.element.backbone.radio.listenToOnce">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>listenToOnce
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenToOnce = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.log" id="apidoc.element.backbone.radio.log">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>log
+        <span class="apidocSignatureSpan">(channelName, eventName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function log(channelName, eventName) {
+  if (typeof console === 'undefined') {
+    return;
+  }
+  var args = _.toArray(arguments).slice(2);
+  console.log('[' + channelName + '] "' + eventName + '"', args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var userChannel = Backbone.Radio.channel('user');
+```
+
+Once you've got a channel, you can attach handlers to it.
+
+```js
+userChannel.on('some:event', function() {
+  console.<span class="apidocCodeKeywordSpan">log</span>('An event has happened!');
+});
+
+userChannel.reply('some:request', 'food is good');
+```
+
+You can also use the 'trigger' methods on the Channel.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.noConflict" id="apidoc.element.backbone.radio.noConflict">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>noConflict
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">noConflict = function () {
+  Backbone.Radio = previousRadio;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.off" id="apidoc.element.backbone.radio.off">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>off
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   return this;
+ },
+
+ // Stop logging all of the activities on this channel to the console
+ tuneOut: function(channelName) {
+   var channel = Radio.channel(channelName);
+   channel._tunedIn = false;
+   channel.<span class="apidocCodeKeywordSpan">off</span>('all', _partial(channelName));
+   delete _logs[channelName];
+   return this;
+ }
+});
+
+/*
+* Backbone.Radio.Requests
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.on" id="apidoc.element.backbone.radio.on">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>on
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Get a reference to the channel named 'user'
+var userChannel = Backbone.Radio.channel('user');
+```
+
+Once you've got a channel, you can attach handlers to it.
+
+```js
+userChannel.<span class="apidocCodeKeywordSpan">on</span>('some:event', function() {
+  console.log('An event has happened!');
+});
+
+userChannel.reply('some:request', 'food is good');
+```
+
+You can also use the 'trigger' methods on the Channel.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.once" id="apidoc.element.backbone.radio.once">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>once
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">once = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+replyOnce: function(name, callback, context) {
+  if (Radio._eventsApi(this, 'replyOnce', name, [callback, context])) {
+    return this;
+  }
+
+  var self = this;
+
+  var once = _.<span class="apidocCodeKeywordSpan">once</span>(function() {
+    self.stopReplying(name);
+    return makeCallback(callback).apply(this, arguments);
+  });
+
+  return this.reply(name, once, context);
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.radio.Channel" id="apidoc.element.backbone.radio.radio.Channel">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>radio.Channel
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">radio.Channel = function (channelName) {
+  this.channelName = channelName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.reply" id="apidoc.element.backbone.radio.reply">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>reply
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reply = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+nothing in particular about an occurrence, Requests are asking for a very specific thing to occur. As a consequence of this,
+requests are 'one-to-one,' which means that you cannot have multiple 'listeners' to a single request.
+
+Let's look at a basic example.
+
+```js
+// Set up an object to reply to a request. In this case, whether or not its visible.
+myObject.<span class="apidocCodeKeywordSpan">reply</span>('visible', this.isVisible);
+
+// Get whether it's visible or not.
+var isViewVisible = myObject.request('visible');
+```
+
+The handler in `reply` can either return a flat value, like `true` or `false`, or a function to be executed. Either way, the value
+ is sent back to
+the requester.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.replyOnce" id="apidoc.element.backbone.radio.replyOnce">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>replyOnce
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">replyOnce = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.request" id="apidoc.element.backbone.radio.request">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>request
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Let's look at a basic example.
+
+```js
+// Set up an object to reply to a request. In this case, whether or not its visible.
+myObject.reply('visible', this.isVisible);
+
+// Get whether it's visible or not.
+var isViewVisible = myObject.<span class="apidocCodeKeywordSpan">request</span>('visible');
+```
+
+The handler in `reply` can either return a flat value, like `true` or `false`, or a function to be executed. Either way, the value
+ is sent back to
+the requester.
+
+Here's a diagram of the Requests pattern:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.reset" id="apidoc.element.backbone.radio.reset">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>reset
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function (channelName) {
+  var channels = !channelName ? this._channels : [this._channels[channelName]];
+  _.each(channels, function (channel) {
+    channel.reset();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+You can also reset a single channel, or all Channels, from the `Radio` object directly. Pass a
+`channelName` to reset just that specific channel, or call the method without any arguments
+to reset every channel.
+
+```js
+// Reset all channels
+Radio.<span class="apidocCodeKeywordSpan">reset</span>();
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.stopListening" id="apidoc.element.backbone.radio.stopListening">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>stopListening
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopListening = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+_.extend(Radio.Channel.prototype, Backbone.Events, Radio.Requests, {
+
+ // Remove all handlers from the messaging systems of this channel
+ reset: function() {
+   this.off();
+   this.<span class="apidocCodeKeywordSpan">stopListening</span>();
+   this.stopReplying();
+   return this;
+ }
+});
+
+/*
+* Top-level API
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.stopReplying" id="apidoc.element.backbone.radio.stopReplying">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>stopReplying
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopReplying = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Turn on debug mode
+Backbone.Radio.DEBUG = true;
+
+// This will log a warning to the console if it goes unhandled
+myChannel.request('show:view');
+
+// Likewise, this will too, helping to prevent memory leaks
+myChannel.<span class="apidocCodeKeywordSpan">stopReplying</span>('startTime');
+```
+
+#### `debugLog(warning, eventName, channelName)`
+
+A function executed whenever an unregistered request is interacted with on a Channel. Only
+called when `DEBUG` is set to `true`. By overriding this you could, for instance, make unhandled
+events throw Errors.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.trigger" id="apidoc.element.backbone.radio.trigger">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>trigger
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trigger = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Model's change event.
+
+```js
+// Listen in on a model's change events
+this.listenTo(someModel, 'change', myCallback);
+
+// Later on, the model triggers a change event when it has been changed
+someModel.<span class="apidocCodeKeywordSpan">trigger</span>('change');
+```
+
+Let's look at a diagram for Backbone.Events:
+
+&lt;p align='center'&gt;
+  &lt;img src='https://cloud.githubusercontent.com/assets/10248067/11762943/5a927e54-a0bd-11e5-8aa5-e0fafae0e559.png'
+; alt='Backbone.Events diagram'&gt;
+&lt;/p&gt;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.tuneIn" id="apidoc.element.backbone.radio.tuneIn">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>tuneIn
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tuneIn(channelName) {
+  var channel = Radio.channel(channelName);
+  channel._tunedIn = true;
+  channel.on('all', _partial(channelName));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Tuning into a Channel is another useful tool for debugging. It passes all
+triggers and requests made on the channel to
+
+[`Radio.log`](https://github.com/jmeas/backbone.radio#log-channelname-eventname--args-).
+Returns `Backbone.Radio`.
+
+```js
+Backbone.Radio.<span class="apidocCodeKeywordSpan">tuneIn</span>('calendar');
+```
+
+#### `tuneOut( channelName )`
+
+Once you're done tuning in you can call `tuneOut` to stop the logging. Returns `Backbone.Radio`.
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.tuneOut" id="apidoc.element.backbone.radio.tuneOut">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>tuneOut
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tuneOut(channelName) {
+  var channel = Radio.channel(channelName);
+  channel._tunedIn = false;
+  channel.off('all', _partial(channelName));
+  delete _logs[channelName];
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+#### `tuneOut( channelName )`
+
+Once you're done tuning in you can call `tuneOut` to stop the logging. Returns `Backbone.Radio`.
+
+```js
+Backbone.Radio.<span class="apidocCodeKeywordSpan">tuneOut</span>('calendar');
+```
+
+#### `log( channelName, eventName [, args...] )`
+
+When tuned into a Channel, this method will be called for all activity on
+a channel. The default implementation is to `console.log` the following message:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.unbind" id="apidoc.element.backbone.radio.unbind">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>unbind
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unbind = function (channelName) {
+  args = _.toArray(arguments).slice(1);
+  channel = this.channel(channelName);
+  return channel[methodName].apply(channel, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backbone.radio.Channel" id="apidoc.module.backbone.radio.Channel">module backbone.radio.Channel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.Channel" id="apidoc.element.backbone.radio.Channel.Channel">
+        function <span class="apidocSignatureSpan">backbone.radio.</span>Channel
+        <span class="apidocSignatureSpan">(channelName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Channel = function (channelName) {
+  this.channelName = channelName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ if (!channelName) {
+   throw new Error('You must provide a name for the channel.');
+ }
+
+ if (Radio._channels[channelName]) {
+   return Radio._channels[channelName];
+ } else {
+   return (Radio._channels[channelName] = new Radio.<span class="apidocCodeKeywordSpan">Channel</span>(channelName));
+ }
+};
+
+/*
+* Backbone.Radio.Channel
+* ----------------------
+* A Channel is an object that extends from Backbone.Events,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backbone.radio.Channel.prototype" id="apidoc.module.backbone.radio.Channel.prototype">module backbone.radio.Channel.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.bind" id="apidoc.element.backbone.radio.Channel.prototype.bind">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>bind
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bind = function (name, callback, context) {
+  return internalOn(this, name, callback, context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+
+var _logs = {};
+
+// This is to produce an identical function in both tuneIn and tuneOut,
+// so that Backbone.Events unregisters it.
+function _partial(channelName) {
+return _logs[channelName] || (_logs[channelName] = _.<span class="apidocCodeKeywordSpan">bind</span>(Radio.log, Radio, channelName
+));
+}
+
+_.extend(Radio, {
+
+// Log information about the channel and event
+log: function(channelName, eventName) {
+  if (typeof console === 'undefined') { return; }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.listenTo" id="apidoc.element.backbone.radio.Channel.prototype.listenTo">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>listenTo
+        <span class="apidocSignatureSpan">(obj, name, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenTo = function (obj, name, callback) {
+  if (!obj) return this;
+  var id = obj._listenId || (obj._listenId = _.uniqueId('l'));
+  var listeningTo = this._listeningTo || (this._listeningTo = {});
+  var listening = listeningTo[id];
+
+  // This object is not listening to any other events on `obj` yet.
+  // Setup the necessary references to track the listening callbacks.
+  if (!listening) {
+    var thisId = this._listenId || (this._listenId = _.uniqueId('l'));
+    listening = listeningTo[id] = {obj: obj, objId: id, id: thisId, listeningTo: listeningTo, count: 0};
+  }
+
+  // Bind callbacks on obj, and keep track of them on listening.
+  internalOn(obj, name, callback, this, listening);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Anyone who has used Backbone should be quite familiar with Backbone.Events. Backbone.Events is what facilitates
+communications between objects in your application. The quintessential example of this is listening in on a
+Model's change event.
+
+```js
+// Listen in on a model's change events
+this.<span class="apidocCodeKeywordSpan">listenTo</span>(someModel, 'change', myCallback);
+
+// Later on, the model triggers a change event when it has been changed
+someModel.trigger('change');
+```
+
+Let's look at a diagram for Backbone.Events:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.listenToOnce" id="apidoc.element.backbone.radio.Channel.prototype.listenToOnce">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>listenToOnce
+        <span class="apidocSignatureSpan">(obj, name, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenToOnce = function (obj, name, callback) {
+  // Map the event into a `{event: once}` object.
+  var events = eventsApi(onceMap, {}, name, callback, _.bind(this.stopListening, this, obj));
+  return this.listenTo(obj, events);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.off" id="apidoc.element.backbone.radio.Channel.prototype.off">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>off
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function (name, callback, context) {
+  if (!this._events) return this;
+  this._events = eventsApi(offApi, this._events, name, callback, {
+    context: context,
+    listeners: this._listeners
+  });
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   return this;
+ },
+
+ // Stop logging all of the activities on this channel to the console
+ tuneOut: function(channelName) {
+   var channel = Radio.channel(channelName);
+   channel._tunedIn = false;
+   channel.<span class="apidocCodeKeywordSpan">off</span>('all', _partial(channelName));
+   delete _logs[channelName];
+   return this;
+ }
+});
+
+/*
+* Backbone.Radio.Requests
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.on" id="apidoc.element.backbone.radio.Channel.prototype.on">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>on
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (name, callback, context) {
+  return internalOn(this, name, callback, context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Get a reference to the channel named 'user'
+var userChannel = Backbone.Radio.channel('user');
+```
+
+Once you've got a channel, you can attach handlers to it.
+
+```js
+userChannel.<span class="apidocCodeKeywordSpan">on</span>('some:event', function() {
+  console.log('An event has happened!');
+});
+
+userChannel.reply('some:request', 'food is good');
+```
+
+You can also use the 'trigger' methods on the Channel.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.once" id="apidoc.element.backbone.radio.Channel.prototype.once">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>once
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">once = function (name, callback, context) {
+  // Map the event into a `{event: once}` object.
+  var events = eventsApi(onceMap, {}, name, callback, _.bind(this.off, this));
+  if (typeof name === 'string' &amp;&amp; context == null) callback = void 0;
+  return this.on(events, callback, context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+replyOnce: function(name, callback, context) {
+  if (Radio._eventsApi(this, 'replyOnce', name, [callback, context])) {
+    return this;
+  }
+
+  var self = this;
+
+  var once = _.<span class="apidocCodeKeywordSpan">once</span>(function() {
+    self.stopReplying(name);
+    return makeCallback(callback).apply(this, arguments);
+  });
+
+  return this.reply(name, once, context);
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.reply" id="apidoc.element.backbone.radio.Channel.prototype.reply">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>reply
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reply(name, callback, context) {
+  if (Radio._eventsApi(this, 'reply', name, [callback, context])) {
+    return this;
+  }
+
+  this._requests || (this._requests = {});
+
+  if (this._requests[name]) {
+    Radio.debugLog('A request was overwritten', name, this.channelName);
+  }
+
+  this._requests[name] = {
+    callback: makeCallback(callback),
+    context: context || this
+  };
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+nothing in particular about an occurrence, Requests are asking for a very specific thing to occur. As a consequence of this,
+requests are 'one-to-one,' which means that you cannot have multiple 'listeners' to a single request.
+
+Let's look at a basic example.
+
+```js
+// Set up an object to reply to a request. In this case, whether or not its visible.
+myObject.<span class="apidocCodeKeywordSpan">reply</span>('visible', this.isVisible);
+
+// Get whether it's visible or not.
+var isViewVisible = myObject.request('visible');
+```
+
+The handler in `reply` can either return a flat value, like `true` or `false`, or a function to be executed. Either way, the value
+ is sent back to
+the requester.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.replyOnce" id="apidoc.element.backbone.radio.Channel.prototype.replyOnce">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>replyOnce
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replyOnce(name, callback, context) {
+  if (Radio._eventsApi(this, 'replyOnce', name, [callback, context])) {
+    return this;
+  }
+
+  var self = this;
+
+  var once = _.once(function () {
+    self.stopReplying(name);
+    return makeCallback(callback).apply(this, arguments);
+  });
+
+  return this.reply(name, once, context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.request" id="apidoc.element.backbone.radio.Channel.prototype.request">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>request
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(name) {
+  var args = _.toArray(arguments).slice(1);
+  var results = Radio._eventsApi(this, 'request', name, args);
+  if (results) {
+    return results;
+  }
+  var channelName = this.channelName;
+  var requests = this._requests;
+
+  // Check if we should log the request, and if so, do it
+  if (channelName &amp;&amp; this._tunedIn) {
+    Radio.log.apply(this, [channelName, name].concat(args));
+  }
+
+  // If the request isn't handled, log it in DEBUG mode and exit
+  if (requests &amp;&amp; (requests[name] || requests['default'])) {
+    var handler = requests[name] || requests['default'];
+    args = requests[name] ? args : arguments;
+    return Radio._callHandler(handler.callback, handler.context, args);
+  } else {
+    Radio.debugLog('An unhandled request was fired', name, channelName);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Let's look at a basic example.
+
+```js
+// Set up an object to reply to a request. In this case, whether or not its visible.
+myObject.reply('visible', this.isVisible);
+
+// Get whether it's visible or not.
+var isViewVisible = myObject.<span class="apidocCodeKeywordSpan">request</span>('visible');
+```
+
+The handler in `reply` can either return a flat value, like `true` or `false`, or a function to be executed. Either way, the value
+ is sent back to
+the requester.
+
+Here's a diagram of the Requests pattern:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.reset" id="apidoc.element.backbone.radio.Channel.prototype.reset">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reset() {
+  this.off();
+  this.stopListening();
+  this.stopReplying();
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+You can also reset a single channel, or all Channels, from the `Radio` object directly. Pass a
+`channelName` to reset just that specific channel, or call the method without any arguments
+to reset every channel.
+
+```js
+// Reset all channels
+Radio.<span class="apidocCodeKeywordSpan">reset</span>();
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.stopListening" id="apidoc.element.backbone.radio.Channel.prototype.stopListening">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>stopListening
+        <span class="apidocSignatureSpan">(obj, name, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopListening = function (obj, name, callback) {
+  var listeningTo = this._listeningTo;
+  if (!listeningTo) return this;
+
+  var ids = obj ? [obj._listenId] : _.keys(listeningTo);
+
+  for (var i = 0; i &lt; ids.length; i++) {
+    var listening = listeningTo[ids[i]];
+
+    // If listening doesn't exist, this object is not currently
+    // listening to obj. Break out early.
+    if (!listening) break;
+
+    listening.obj.off(name, callback, this);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+_.extend(Radio.Channel.prototype, Backbone.Events, Radio.Requests, {
+
+ // Remove all handlers from the messaging systems of this channel
+ reset: function() {
+   this.off();
+   this.<span class="apidocCodeKeywordSpan">stopListening</span>();
+   this.stopReplying();
+   return this;
+ }
+});
+
+/*
+* Top-level API
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.stopReplying" id="apidoc.element.backbone.radio.Channel.prototype.stopReplying">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>stopReplying
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stopReplying(name, callback, context) {
+  if (Radio._eventsApi(this, 'stopReplying', name)) {
+    return this;
+  }
+
+  // Remove everything if there are no arguments passed
+  if (!name &amp;&amp; !callback &amp;&amp; !context) {
+    delete this._requests;
+  } else if (!removeHandlers(this._requests, name, callback, context)) {
+    Radio.debugLog('Attempted to remove the unregistered request', name, this.channelName);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Turn on debug mode
+Backbone.Radio.DEBUG = true;
+
+// This will log a warning to the console if it goes unhandled
+myChannel.request('show:view');
+
+// Likewise, this will too, helping to prevent memory leaks
+myChannel.<span class="apidocCodeKeywordSpan">stopReplying</span>('startTime');
+```
+
+#### `debugLog(warning, eventName, channelName)`
+
+A function executed whenever an unregistered request is interacted with on a Channel. Only
+called when `DEBUG` is set to `true`. By overriding this you could, for instance, make unhandled
+events throw Errors.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.trigger" id="apidoc.element.backbone.radio.Channel.prototype.trigger">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>trigger
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trigger = function (name) {
+  if (!this._events) return this;
+
+  var length = Math.max(0, arguments.length - 1);
+  var args = Array(length);
+  for (var i = 0; i &lt; length; i++) args[i] = arguments[i + 1];
+
+  eventsApi(triggerApi, this._events, name, void 0, args);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Model's change event.
+
+```js
+// Listen in on a model's change events
+this.listenTo(someModel, 'change', myCallback);
+
+// Later on, the model triggers a change event when it has been changed
+someModel.<span class="apidocCodeKeywordSpan">trigger</span>('change');
+```
+
+Let's look at a diagram for Backbone.Events:
+
+&lt;p align='center'&gt;
+  &lt;img src='https://cloud.githubusercontent.com/assets/10248067/11762943/5a927e54-a0bd-11e5-8aa5-e0fafae0e559.png'
+; alt='Backbone.Events diagram'&gt;
+&lt;/p&gt;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Channel.prototype.unbind" id="apidoc.element.backbone.radio.Channel.prototype.unbind">
+        function <span class="apidocSignatureSpan">backbone.radio.Channel.prototype.</span>unbind
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unbind = function (name, callback, context) {
+  if (!this._events) return this;
+  this._events = eventsApi(offApi, this._events, name, callback, {
+    context: context,
+    listeners: this._listeners
+  });
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.backbone.radio.Requests" id="apidoc.module.backbone.radio.Requests">module backbone.radio.Requests</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Requests.reply" id="apidoc.element.backbone.radio.Requests.reply">
+        function <span class="apidocSignatureSpan">backbone.radio.Requests.</span>reply
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reply(name, callback, context) {
+  if (Radio._eventsApi(this, 'reply', name, [callback, context])) {
+    return this;
+  }
+
+  this._requests || (this._requests = {});
+
+  if (this._requests[name]) {
+    Radio.debugLog('A request was overwritten', name, this.channelName);
+  }
+
+  this._requests[name] = {
+    callback: makeCallback(callback),
+    context: context || this
+  };
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+nothing in particular about an occurrence, Requests are asking for a very specific thing to occur. As a consequence of this,
+requests are 'one-to-one,' which means that you cannot have multiple 'listeners' to a single request.
+
+Let's look at a basic example.
+
+```js
+// Set up an object to reply to a request. In this case, whether or not its visible.
+myObject.<span class="apidocCodeKeywordSpan">reply</span>('visible', this.isVisible);
+
+// Get whether it's visible or not.
+var isViewVisible = myObject.request('visible');
+```
+
+The handler in `reply` can either return a flat value, like `true` or `false`, or a function to be executed. Either way, the value
+ is sent back to
+the requester.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Requests.replyOnce" id="apidoc.element.backbone.radio.Requests.replyOnce">
+        function <span class="apidocSignatureSpan">backbone.radio.Requests.</span>replyOnce
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replyOnce(name, callback, context) {
+  if (Radio._eventsApi(this, 'replyOnce', name, [callback, context])) {
+    return this;
+  }
+
+  var self = this;
+
+  var once = _.once(function () {
+    self.stopReplying(name);
+    return makeCallback(callback).apply(this, arguments);
+  });
+
+  return this.reply(name, once, context);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Requests.request" id="apidoc.element.backbone.radio.Requests.request">
+        function <span class="apidocSignatureSpan">backbone.radio.Requests.</span>request
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(name) {
+  var args = _.toArray(arguments).slice(1);
+  var results = Radio._eventsApi(this, 'request', name, args);
+  if (results) {
+    return results;
+  }
+  var channelName = this.channelName;
+  var requests = this._requests;
+
+  // Check if we should log the request, and if so, do it
+  if (channelName &amp;&amp; this._tunedIn) {
+    Radio.log.apply(this, [channelName, name].concat(args));
+  }
+
+  // If the request isn't handled, log it in DEBUG mode and exit
+  if (requests &amp;&amp; (requests[name] || requests['default'])) {
+    var handler = requests[name] || requests['default'];
+    args = requests[name] ? args : arguments;
+    return Radio._callHandler(handler.callback, handler.context, args);
+  } else {
+    Radio.debugLog('An unhandled request was fired', name, channelName);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Let's look at a basic example.
+
+```js
+// Set up an object to reply to a request. In this case, whether or not its visible.
+myObject.reply('visible', this.isVisible);
+
+// Get whether it's visible or not.
+var isViewVisible = myObject.<span class="apidocCodeKeywordSpan">request</span>('visible');
+```
+
+The handler in `reply` can either return a flat value, like `true` or `false`, or a function to be executed. Either way, the value
+ is sent back to
+the requester.
+
+Here's a diagram of the Requests pattern:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.backbone.radio.Requests.stopReplying" id="apidoc.element.backbone.radio.Requests.stopReplying">
+        function <span class="apidocSignatureSpan">backbone.radio.Requests.</span>stopReplying
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stopReplying(name, callback, context) {
+  if (Radio._eventsApi(this, 'stopReplying', name)) {
+    return this;
+  }
+
+  // Remove everything if there are no arguments passed
+  if (!name &amp;&amp; !callback &amp;&amp; !context) {
+    delete this._requests;
+  } else if (!removeHandlers(this._requests, name, callback, context)) {
+    Radio.debugLog('Attempted to remove the unregistered request', name, this.channelName);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Turn on debug mode
+Backbone.Radio.DEBUG = true;
+
+// This will log a warning to the console if it goes unhandled
+myChannel.request('show:view');
+
+// Likewise, this will too, helping to prevent memory leaks
+myChannel.<span class="apidocCodeKeywordSpan">stopReplying</span>('startTime');
+```
+
+#### `debugLog(warning, eventName, channelName)`
+
+A function executed whenever an unregistered request is interacted with on a Channel. Only
+called when `DEBUG` is set to `true`. By overriding this you could, for instance, make unhandled
+events throw Errors.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
